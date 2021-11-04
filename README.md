@@ -9,4 +9,4 @@
 <h2>Build production version</h2>
 `npm run build` 
 
-<h2>Made with love by isma <3</h2>
+<h2>Made with love by isma ❤</h2>
