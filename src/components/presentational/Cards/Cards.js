@@ -93,6 +93,7 @@ export const Cards = ({
               isExternal
               transition=".5s all ease"
               _hover={{ color: "orange" }}
+              textTransform="capitalize"
             >
               {origin.name}
             </Link>
