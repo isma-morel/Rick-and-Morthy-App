@@ -1,7 +1,8 @@
 <h1>Rick And Morthy Api REST</h1>
 
 <h2>Lets start:</h2>
-`npm install`
+<code>npm install</code>
+``
 
 <h2>Development Server</h2>
 `npm run start`
