@@ -76,7 +76,9 @@ export const Cards = ({
           <Text fontSize="1rem" fontWeight="500" color="#9e9e9e">
             Gender:
           </Text>
-          <Text color="brand.200">{gender}</Text>
+          <Text color="brand.200" textTransform="capitalize">
+            {gender}
+          </Text>
         </Box>
         <Box
           d="flex"
@@ -85,7 +87,7 @@ export const Cards = ({
           justifyContent="flex-end"
         >
           <Text fontSize="1rem" fontWeight="500" color="#9e9e9e">
-            First seen in:
+            Last known seen:
           </Text>
           <Text color="brand.200">
             <Link
