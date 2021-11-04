@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Cards } from "../../presentational/Cards/Cards";
 
 export const CardList = () => {
-  const [pageNumber] = useState(Math.floor(Math.random() * (47 - 1) + 1));
+  const [pageNumber] = useState(Math.floor(Math.random() * (43 - 1) + 1));
   const [characters, setCharacters] = useState(null);
   const [info, setInfo] = useState(null);
   useEffect(() => {
@@ -21,31 +21,66 @@ export const CardList = () => {
   }, []);
   const nextPage = () => {
     const getNext = info.next;
-    fetch(getNext)
-      .then((res) => res.json())
-      .then((data) => {
-        setCharacters(data.results);
-        setInfo(data.info);
-      });
+    getNext &&
+      fetch(getNext)
+        .then((res) => res.json())
+        .then((data) => {
+          setCharacters(data.results);
+          setInfo(data.info);
+        });
   };
   const prevPage = () => {
     const getPrev = info.prev;
-    fetch(getPrev)
-      .then((res) => res.json())
-      .then((data) => {
-        setCharacters(data.results);
-        setInfo(data.info);
-      });
+    getPrev &&
+      fetch(getPrev)
+        .then((res) => res.json())
+        .then((data) => {
+          setCharacters(data.results);
+          setInfo(data.info);
+        });
   };
 
   return (
     <>
+      <Box d="flex" justifyContent="center" alignItems="center">
+        <Button
+          onClick={prevPage}
+          px="2"
+          mx="2"
+          mt="4"
+          bg="brand.500"
+          color="brand.200"
+          boxShadow="md"
+          transition=".5s all ease"
+          _hover={{ color: "orange" }}
+          _active={{ bg: "brand.500" }}
+          _focus={{ boxShadow: "md" }}
+        >
+          Prev
+        </Button>
+        <Button
+          onClick={nextPage}
+          px="2"
+          mx="2"
+          mt="4"
+          bg="brand.500"
+          color="brand.200"
+          boxShadow="md"
+          transition=".5s all ease"
+          _hover={{ color: "orange" }}
+          _active={{ bg: "brand.500" }}
+          _focus={{ boxShadow: "md" }}
+        >
+          Next
+        </Button>
+      </Box>
       <Box
         d="flex"
         justifyContent="center"
         alignItems="center"
         flexWrap="wrap"
         maxW="1920px"
+        py="4"
       >
         {characters &&
           characters.map(
@@ -62,15 +97,7 @@ export const CardList = () => {
               />
             )
           )}
-        <Button onClick={prevPage} px="2">
-          Previous
-        </Button>
-        <Button onClick={nextPage} px="2">
-          Next
-        </Button>
       </Box>
-      {characters ? console.log(characters) : null}
-      {info ? console.log(info) : null}
     </>
   );
 };

@@ -48,7 +48,12 @@ export const Cards = ({
           justifyContent="flex-start"
         >
           <Text fontSize="1.5rem">
-            <Link href={url} isExternal>
+            <Link
+              href={url}
+              isExternal
+              transition=".5s all ease"
+              _hover={{ color: "orange" }}
+            >
               {name}
             </Link>
           </Text>
@@ -71,7 +76,7 @@ export const Cards = ({
           <Text fontSize="1rem" fontWeight="500" color="#9e9e9e">
             Gender:
           </Text>
-          <Text color="#f5f5f5">{gender}</Text>
+          <Text color="brand.200">{gender}</Text>
         </Box>
         <Box
           d="flex"
@@ -82,8 +87,13 @@ export const Cards = ({
           <Text fontSize="1rem" fontWeight="500" color="#9e9e9e">
             First seen in:
           </Text>
-          <Text color="#f5f5f5">
-            <Link href={origin.url} isExternal>
+          <Text color="brand.200">
+            <Link
+              href={origin.url}
+              isExternal
+              transition=".5s all ease"
+              _hover={{ color: "orange" }}
+            >
               {origin.name}
             </Link>
           </Text>
