@@ -2,12 +2,11 @@
 
 <h2>Lets start:</h2>
 <code>npm install</code>
-``
 
 <h2>Development Server</h2>
-`npm run start`
+<code>npm run start</code>
 
 <h2>Build production version</h2>
-`npm run build` 
+<code>npm run build</code>
 
 <h2>Made with love by isma ❤</h2>
