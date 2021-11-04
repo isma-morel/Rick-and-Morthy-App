@@ -24,7 +24,7 @@ export const Nav = () => {
           <Link px="20px" transition=".5s all ease">
             About
           </Link>
-          <Button colorScheme="orange" _active={{}}>
+          <Button colorScheme="orange" _focus={{}}>
             Help Us
           </Button>
         </Box>
