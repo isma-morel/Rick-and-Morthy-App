@@ -1,12 +1,12 @@
-#Rick And Morthy Api REST
+<h1>Rick And Morthy Api REST</h1>
 
-#Lets start:
+<h2>Lets start:</h2>
 `npm install`
 
-#Development Server
+<h2>Development Server</h2>
 `npm run start`
 
-#Build production version
+<h2>Build production version</h2>
 `npm run build` 
 
-#Made with love by isma <3
+<h2>Made with love by isma <3</h2>
